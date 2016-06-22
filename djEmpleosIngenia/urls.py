@@ -16,9 +16,16 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from home import views
+from home import viewsH
+from vacantes import viewsV
+from contacto import viewsC
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^inicio/', )
+    url(r'^$', viewsH.renderHome, name='urlHome'),
+    url(r'^infoingenia/$', viewsH.renderIngeniaInfo, name='urlInfoIngenia'),
+    url(r'^beneficios/$', viewsH.renderBeneficios, name='urlBeneficios'),
+    url(r'^vacantes/$', viewsV.renderVacantes, name='urlVacantes'),
+    url(r'^contacto/$', viewsC.renderContactoIngenia, name='urlContacto'),
+    url(r'^aplicaya/$', viewsC.renderAplicaYa, name='urlAplicaYa')
 ]

@@ -1,5 +1,6 @@
 from django.contrib import admin
-from . import models
+from . import modelsV
 # Register your models here.
-admin.site.register(models.Vacante)
-admin.site.register(models.Requisito)
+admin.site.register(modelsV.Vacante)
+admin.site.register(modelsV.Requisito)
+admin.site.register(modelsV.BeneficiosPrestacione)

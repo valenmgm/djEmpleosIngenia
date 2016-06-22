@@ -1,0 +1,1093 @@
+/* Basic Styles */
+
+body {
+	background: url(../css/images/pizzarra.jpg) no-repeat top center #000000 fixed;
+	color: #ffffff;
+	font-family: Verdana;
+}
+
+p {
+	font-family: "HalogenRegular";
+	font-size: 16px;
+	line-height: 26px;
+}
+a {
+	text-decoration: none;
+	border: none;
+	color: #ffffff;
+}
+
+h1 {
+	font-family: 'TalkingToTheMoonRegular';
+	font-size: 33px;	
+	color: #ffffff;
+	text-align: right;
+	padding-bottom: 60px;
+}
+
+h2 {
+	font-family: 'TalkingToTheMoonRegular';
+	font-size: 28px;	
+	color: #ffffff;
+	padding-bottom: 20px;
+}
+
+h3{
+	font-family: 'HalogenRegular';
+	font-size: 25px;
+	color: #ffffff;
+	margin-bottom: 11px;
+}
+
+h3 img, #sliderBeneficios h2 img{
+	margin: 0 9px 0 0;
+}
+
+h4{
+	font-size: 13px; 
+}
+
+.alink {
+	font-family: 'TalkingToTheMoonRegular';
+	font-size: 23px;
+	color: #f16c00;
+	text-decoration: underline;
+}
+
+/* Font Face */
+
+@font-face {
+    font-family: 'JennaSueRegular';
+    src: url('../fonts/JennaSue-webfont.eot');
+    src: url('../fonts/JennaSue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/JennaSue-webfont.woff') format('woff'),
+         url('../fonts/JennaSue-webfont.ttf') format('truetype'),
+         url('../fonts/JennaSue-webfont.svg#JennaSueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'QikkiRegRegular';
+    src: url('../fonts/Qarmic_sans_Abridged-webfont.eot');
+    src: url('../fonts/Qarmic_sans_Abridged-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Qarmic_sans_Abridged-webfont.woff') format('woff'),
+         url('../fonts/Qarmic_sans_Abridged-webfont.ttf') format('truetype'),
+         url('../fonts/Qarmic_sans_Abridged-webfont.svg#QikkiRegRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'HalogenRegular';
+    src: url('../fonts/halogen-webfont.eot');
+    src: url('../fonts/halogen-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/halogen-webfont.woff') format('woff'),
+         url('../fonts/halogen-webfont.ttf') format('truetype'),
+         url('../fonts/halogen-webfont.svg#HalogenRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'TalkingToTheMoonRegular';
+    src: url('../fonts/talkingtothemoon-webfont.eot');
+    src: url('../fonts/talkingtothemoon-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/talkingtothemoon-webfont.woff') format('woff'),
+         url('../fonts/talkingtothemoon-webfont.ttf') format('truetype'),
+         url('../fonts/talkingtothemoon-webfont.svg#TalkingToTheMoonRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.importantHeadline {
+	color: #f16c00;
+}
+
+/* Generic Styles */
+
+.clear{
+	clear: both;
+}
+
+#header {
+	width: 100%;
+	height: 125px;
+}
+
+#logo {
+	width: 274px;
+	padding-top: 36px;
+	float: left;
+}
+
+#menuSection {
+	width: 626px;
+	height: 125px;
+	float: left;
+}
+
+.navigation {
+	height: 20px;
+	padding-top: 20px;
+	font-size: 12px;
+	display: block;
+	list-style: none;
+	float: right;
+}
+
+.navigation li {
+	float: left;
+	margin-left: 20px;
+}
+
+.navigation a:hover {
+	color: #f16c00;
+}
+
+#social {
+	height: 22px;
+	padding-top: 20px;
+	text-align: right;
+}
+
+#container {	
+	width: 900px;
+	margin: 0 auto;
+	padding-left: 30px;
+}
+
+#footer {
+	width: 900px;
+	height: 40px;
+	clear: both;
+	background: url(../css/images/footer_back.png) no-repeat right;
+	text-align: right;
+}
+
+#footer p {
+	font-family: Verdana;
+	font-size: 11px;
+	color: #333333;
+	font-style: italic;
+	padding: 5px 30px;
+}
+
+
+.right{
+	float: right;
+}
+
+.left{
+	float: left;
+}
+
+/* Easy Slider */
+
+	#slider ul, #slider li,
+	#slider2 ul, #slider2 li  {
+		margin:0;
+		padding:0;
+		list-style:none;
+		}
+	#slider, #slider2 {margin-top:1em;}
+	#slider2 p { font-size: 18px; }
+	#slider li { 
+		/* 
+			define width and height of list item (slide)
+			entire slider area will adjust according to the parameters provided here
+		*/ 
+		width:365px;
+		height:100px;
+		overflow:hidden; 
+		padding-top: 10px;
+		margin: 0 auto;
+		}
+		
+	#slider2 li{
+		width:365px;
+		height:90px;
+		overflow:hidden; 
+	}
+		
+	/* numeric controls */	
+
+	ol#controls, ol#controls2{
+		margin:0.5em 0;
+		padding:0;
+		height:10px;	
+		}
+	ol#controls li, ol#controls2 li, ol#controls3 li, ol#controls4 li{
+		margin:0 10px 0 0; 
+		padding:0;
+		float:left;
+		list-style:none;
+		height:8px;
+		}
+	ol#controls li a, ol#controls2 li a, ol#controls3 li a, ol#controls4 li a{
+		float:left;
+		height:1px;
+		background:#ffffff;
+		color:#555;
+		padding: 4px;
+		font-size: 0;
+		display: block;
+		float: left;
+		width: 1px;
+		}
+	ol#controls li.current a, ol#controls2 li.current a, ol#controls3 li.current a, ol#controls4 li.current a{
+		background:#f16c00;
+		color:#fff;
+		}
+	ol#controls li a:focus, ol#controls2 li a:focus, #prevBtn a:focus, #nextBtn a:focus{outline:none;}
+
+
+	#sliderBeneficios li{
+		width:900px;
+		overflow:hidden; 
+		padding-top: 10px;
+		margin: 0 auto;
+	}
+	
+/* // Easy Slider */
+
+
+/* Home */
+
+#vacantesRecientes {
+	font-family: 'HalogenRegular';
+	width: 456px;
+	height: 220px;
+	float: left;
+	color: #ffffff;
+}
+
+#nuestroVideo {
+	height: 305px;
+	background: url(../css/images/video_.png) no-repeat 15px 24px;
+}
+
+.nvideo {
+	padding-left: 31px;
+}
+
+#homeLeft {
+	width: 480px;
+	height: 470px;
+	float: left;
+}
+
+#homeRight {
+	width: 400px;
+	float: left;
+}
+
+#experiencia {
+	width: 456px;
+	float: left;
+}
+
+.areas {
+	padding: 5px;
+}
+
+#envioCv {
+	width: 365px;
+	height: 50px;
+	padding-top: 60px;
+	text-align: right;
+	float: left;
+}
+
+#envioCv  p {
+	font-size: 18px;
+}
+
+.textCv {
+	width: 265px;
+	height: 45px;
+	overflow: hidden;
+	float: left;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.textCv p {
+	line-height: 20px;
+}
+
+.top {
+	padding-top: 5px;
+}
+
+.firstTitle {
+	padding-bottom: 5px;
+}
+
+.secondTitle {
+	font-size: 26px;
+	padding-bottom: 50px;
+}
+
+/*¿Por qué Ingenia?*/
+
+.parrafo280px{
+	width: 280px;
+}
+
+.parrafo400px{
+	width: 400px;
+}
+
+.parrafo700px{
+	width: 700px;
+}
+
+
+.block{
+	margin: 0 0 193px 0;
+}
+
+.block2{
+	margin: 0 0 48px 0;
+}
+
+
+.block3{
+	margin: 0 0 79px 0;
+}
+
+
+.txt18px{
+	font-size: 23px;
+}
+
+.txt24px{
+	font-size: 24px;
+}
+
+.txt33px{
+	font-size: 22px;
+	color: #ff7000;
+	font-family: 'TalkingToTheMoonRegular';
+}
+
+.txt35px{
+	font-size: 25px;
+	color: #ffffff;
+	font-family: 'TalkingToTheMoonRegular';
+}
+
+.txt35px p {
+	font-family: 'TalkingToTheMoonRegular' !important;
+	font-size: 35px !important;
+	display: inline;
+}
+
+
+.txt39px{
+	font-size: 24px;
+	color: #ff7000;
+	font-family: 'TalkingToTheMoonRegular';
+}
+
+#sliderBeneficios h2{
+	margin-bottom: 11px;
+	padding: 0;
+}
+
+
+.postit{
+	background: url('../css/images/1Por_que_ingenia/img2a.png') no-repeat;
+	width: 351px;
+	height: 318px;
+	float: right;
+	position: relative;
+}
+
+.postit2{
+	background: url('../css/images/1Por_que_ingenia/img8a.png') no-repeat;
+	width: 314px;
+	height: 281px;
+}
+
+.postit2 p{
+	color: #000000;
+    font-family: 'TalkingToTheMoonRegular';
+    font-size: 24px;
+    left: 54px;
+    line-height: 30px;
+    position: relative;
+    text-align: center;
+    top: 30px;
+    width: 241px;
+}
+
+.imgWifi{
+	position: relative;
+	top: 167px;
+	left: 7px;
+	margin-bottom: 88px;
+}
+
+.imgAlerta{
+	margin: 0 0 0 80px;
+}
+
+p.rotate{
+	-moz-transform:rotate(11deg);
+	-webkit-transform:rotate(11deg);
+	-o-transform:rotate(11deg);
+	-ms-transform:rotate(11deg);
+	color: #000000;
+    font-family: 'TalkingToTheMoonRegular';
+    font-size: 28px;
+    left: 88px;
+    position: absolute;
+    text-align: center;
+    top: 68px;
+    width: 200px;
+}
+
+.marginLeft{
+	margin-left: 50px;
+}
+
+.mensaje{
+	background: url('../css/images/1Por_que_ingenia/img5.png') no-repeat;
+	width: 282px;
+	height: 407px;
+	float: left;
+}
+
+.mensaje p{
+	color: #000000;
+	width: 200px;
+	margin-left: 43px;
+	margin-top: 106px;
+}
+
+
+.marginTop61px{
+	margin-top: 61px;
+}
+
+.titleRotate{
+	-moz-transform:rotate(-41deg);
+	-webkit-transform:rotate(-41deg);
+	-o-transform:rotate(-41deg);
+	-ms-transform:rotate(-41deg);
+}
+
+
+.arrowLeft{
+	position: relative;
+	top: 69px;
+	left: 224px;
+}
+
+.marginTitle{
+	top: 60px;
+	position: relative;
+}
+
+.listValores{
+	font-family: 'HalogenRegular';
+	font-size: 16px;
+	left: -88px;
+    position: relative;
+}
+
+.miniTitle {
+	color: #F16C00;
+	font-size: 17px;
+}
+
+
+
+/*Beneficios*/
+
+.underline{
+	text-decoration: underline;
+}
+
+.colLeft{
+	float: left;
+	width: 339px;
+}
+
+.colRight{
+	float: right;
+	width: 370px;
+	height: 600px;
+}
+
+#controls3{
+	text-align: center;
+	margin: 0 auto 30px auto;
+	
+}
+
+.marginBottom20px{
+	margin-bottom: 20px;
+}
+
+.mensaje p.mparrafo{
+	margin: 0 0 20px 36px;
+}
+
+.mensaje p.marginTop20px{
+	margin-top: 64px;
+}
+
+
+.dottedLine{
+    left: 99px;
+    position: relative;
+}
+
+#prevBtn, #nextBtn {
+	display: block;
+	width: 56px;
+	height: 37px;
+	position: absolute;
+	top: 456px;
+	z-index: 1000;
+}
+
+#prevBtn {
+	left: 11%;
+}
+
+#nextBtn {
+	right: 8%;
+}
+
+#prevBtn a, #nextBtn a {
+	display: block;
+	position: relative;
+	width: 56px;
+	height: 37px;
+	text-indent: -8000px;
+}
+
+#nextBtn a {
+	background: url('images/2Beneficios/flecha_next.png') no-repeat 0 0;
+}
+
+#prevBtn a {
+	background: url('images/2Beneficios/flecha_back.png') no-repeat 0 0;
+}
+
+/*Vacantes*/
+
+#sliderVacantes{
+	margin-left: 81px;
+}
+
+.listaVacantes{
+	display: block;
+	width: 819px;
+	padding: 48px 0 000000 0;
+}
+
+
+.arrowVacante{
+	margin-right: 10px;
+}
+
+.dottedVacante{
+	background: url('../css/images/3Vacantes/Linea.png') repeat-x 0 bottom;
+	height: 5px;
+	width: 761px;
+	margin-left: 50px;
+	margin-top: 35px;
+}
+
+.lnksVacantes a{
+	text-decoration: underline;
+	font-size: 13px;
+}
+
+.lnksVacantes a:hover{
+	color: #F16C00;
+}
+
+.listaVacantes .marginLeft{
+	margin-left: 30px;
+}
+
+#controls4{
+	margin: 20px auto 50px 412px;
+    width: 300px;
+}
+
+.iframeVentana{
+	position: absolute;
+	background: url('../css/images/3Vacantes/lightbox.png') no-repeat;
+	width: 479px;
+	height: 450px;
+	top: 197px;
+	left: 32%;
+	z-index: 2;
+}
+
+p.labelV label {
+	font-family: Verdana;
+	font-size: 13px;
+}
+
+iframe {
+	background-color:transparent;
+	margin-top: -5px;
+}
+
+
+/*Aplica ahora*/
+
+/*.error{
+	background: #F16C00;
+	border-radius: 200px;
+}
+*/
+#formAplica{
+	position: relative;
+	margin-top: 62px;
+	margin-bottom: 100px;
+	font-family: Verdana;
+}
+
+#formAplica ul li{
+	margin-bottom: 22px;
+}
+
+.nombre, .email, .telefono, .sexo, .cargo, .txtMensaje {
+	font-family: 'TalkingToTheMoonRegular';
+  font-size: 30px;
+  padding-bottom: 23px;
+  padding-left: 75px;
+}
+
+.cargo{
+	margin-right: 10px;
+}
+
+.nombre{
+	background: url('../css/images/4Aplica_ahora/1icn_nombre.png') no-repeat 28px 10px;
+}
+
+.email{
+	background: url('../css/images/4Aplica_ahora/2icn_email.png') no-repeat 0 10px;
+}
+
+.telefono{
+	background: url('../css/images/4Aplica_ahora/3icn_telefono.png') no-repeat 28px 10px;
+}
+
+.sexo{
+	background: url('../css/images/4Aplica_ahora/4icn_sexo.png') no-repeat 38px 17px;
+}
+
+.cargo{
+	background: url('../css/images/4Aplica_ahora/5icn__cargo.png') no-repeat 33px 17px;
+}
+
+.txtBox{
+	background: url('../css/images/4Aplica_ahora/celda.png') no-repeat;
+	width: 110px;
+	height: 25px;
+	border: none;
+	color: #ffffff;
+	padding: 2px 11px; 
+}
+
+.txtBox2, .txtBox3{
+	background: url('../css/images/4Aplica_ahora/celda2.png') no-repeat;
+	width: 110px;
+	height: 25px;
+	border: none;
+	color: #ffffff;
+	padding: 2px 11px;
+	cursor: pointer;
+}
+
+.selectList{
+	background: #454A4E;
+	position: absolute;
+	border: solid #ffffff 1px;
+	width: 129px;
+	padding: 10px 0 10px 0;
+	font-size: 13px;
+	top: 249px;
+	left: 170px;
+	border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomright: 10px;	
+	border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	display: none;
+}
+
+.selectList2{
+	background: #454A4E;
+	position: absolute;
+	border: solid #ffffff 1px;
+	width: 129px;
+	padding: 10px 0 10px 0;
+	font-size: 13px;
+	top: 198px;
+	left: 134px;
+	border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomright: 10px;	
+	border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	display: none;
+}
+
+
+#formAplica ul.left{
+	position: relative;
+}
+
+#formAplica ul li .selectList li{
+	margin-bottom: 0;
+	padding: 2px 0 5px 0;
+}
+
+#formAplica ul li .selectList2 li{
+	margin-bottom: 0;
+	padding: 2px 0 5px 0;
+}
+
+#formAplica ul li .selectList li:hover{
+	background-color: #F36523;
+	cursor: pointer;
+}
+
+#formAplica ul li .selectList2 li:hover{
+	background-color: #F36523;
+	cursor: pointer;
+}
+
+#formAplica ul li .selectList li span{
+	margin-left: 17px;
+}
+
+#formAplica ul li .selectList2 li span{
+	margin-left: 17px;
+}
+
+.btnSubmit{
+	background: url('../css/images/4Aplica_ahora/enviar.png') no-repeat;
+	width: 86px;
+	height: 31px;
+	border: none;
+	cursor: pointer;
+}
+
+.dragCv{
+	margin-left: 66px;
+}
+
+.dragCv p{
+	font-family: Verdana;
+}
+
+.dragCv .flecha{
+	background: url('../css/images/4Aplica_ahora/Flecha2.png') no-repeat 0 0;
+	padding-left: 72px;
+	font-size: 14px !important;
+}
+
+.dragCv .flecha a{
+	color: #F36523;
+	text-decoration: underline;
+}
+
+.dragCv .flecha a:hover{
+	text-decoration: none;
+}
+
+.dragBox{
+	background: url('../css/images/4Aplica_ahora/caja.png') no-repeat;
+	width: 206px;
+	height: 210px;
+	margin-bottom: 40px;
+	margin-top: 22px;
+}
+
+.dragBox p{
+	position: relative;
+	top: 185px;
+	text-align: center;
+	font-family: Verdana;
+	font-size: 14px !important;
+}
+
+.enviar{
+	margin-top: 118px;
+	margin-left: 22px;
+}
+
+.text{
+	font-size: 12px;
+    margin-left: 134px;
+}
+
+div.invalid{
+	background: #F36523;
+	left: 302px; 
+    margin-top: -25px;
+    position: absolute;
+    width: 160px;
+    padding: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 12px;
+    float: left;
+}
+
+p.invalid {
+	background: #F36523;
+    width: 215px;
+	float: left;
+    padding: 5px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 14px;
+	margin-top: 10px;
+	margin-left: 30px;
+	text-align: center;
+	line-height: 15px !important;
+}
+
+.mano{
+	left: 656px;
+    position: absolute;
+    top: -120px;
+    z-index: -1;
+}
+
+.aplicaConfirmacion{
+	margin-top: 87px;
+	margin-left: 100px;
+	position: relative;
+	width: 500px;
+	margin-bottom: 200px;
+}
+
+.aplicaConfirmacion p{
+	background: url('../css/images/4Aplica_ahora/buzon.png') no-repeat;
+	font-family: HalogenRegular;
+	font-size: 24px;
+	padding: 65px 20px 64px 117px;
+}
+
+.aplicaConfirmacion .linea{
+	left: 137px;
+    position: relative;
+    top: -58px;
+}
+
+.aplicaConfirmacion .mano{
+	position: absolute;
+	top: -124px;
+	left: 555px;
+}
+
+.file{
+	margin-left: -50px;
+	margin-top: 10px;
+	width: 90px;
+	display: none;
+	position: absolute;
+}
+
+/*Contacto*/
+
+#formContacto{
+	background: url('../css/images/5Contacto/Caja-punteada.png') no-repeat;
+	width: 562px;
+	height: 273px;
+	margin-top: 23px;
+	margin-bottom: 124px;
+	padding: 30px 0 50px 30px;
+	margin-left: 176px;
+	position: relative;
+}
+
+#formContacto .textArea{
+	background: url('../css/images/5Contacto/hoja.png') no-repeat;
+	width: 250px;
+	height: 280px;
+}
+
+#formContacto .textArea textarea{
+	background: none repeat scroll 0 0 transparent;
+    height: 165px;
+    margin-left: 18px;
+    margin-top: 50px;
+    width: 205px;
+    border: none;
+}
+
+#formContacto .nombre{
+	background: none;
+	padding: 0;
+}
+
+#formContacto .email{
+	background: none;
+	padding: 0;
+}
+
+#formContacto .txtMensaje{
+	padding: 0;
+}
+
+
+#formContacto div.invalid{
+	left: 536px;
+	padding: 10px;
+}
+
+#formContacto .captcha{
+	margin-top: 40px;
+}
+
+.labelLeft{
+	margin-left: 176px;
+}
+
+#formContacto .contactoConfirmacion{
+	font-size: 24px;
+	text-align: center;
+	background: url('../css/images/5Contacto/img_mail.png') no-repeat 128px 93px;
+	padding-bottom: 160px;
+	margin-top: 50px;
+}
+
+.label{
+	font-size: 16px;
+}
+
+
+h2.htitle{
+	color: #F16C00;
+	font-size: 25px;
+	font-family: 'HalogenRegular';
+	margin-bottom: 11px;
+	padding-bottom: 0;
+}
+
+.labelBlock{
+	display: block;
+}
+
+.overlay{
+	background :#000000;
+	display : none;
+	height : 100%; 
+	width : 100%; 
+	position : fixed; 
+	top : 0; 
+	left : 0;
+	z-index: 1;
+}
+
+
+/*captcha*/
+
+.captcha{
+	background: url(../css/images/captcha/Captcha-Caja-punteada.png) no-repeat;
+	width: 265px;
+	height: 70px;
+	font-size: 10px;
+	padding: 10px;
+	line-height: 12px;
+}
+
+.iconosCaptcha{
+	margin-top: 8px;
+}
+
+.iconosCaptcha li{
+	float: left;
+	margin-right: 8px;
+}
+
+.icono{
+	width: 33px;
+	height: 32px;
+	display: block;
+	text-indent: -9999px;
+}
+
+.circulo{
+	background: url(../css/images/captcha/Captcha_circulo_sprite.png) no-repeat;
+	
+}
+
+.pentagono{
+	background: url(../css/images/captcha/Captcha_pentagono_sprite.png) no-repeat;
+
+}
+
+.rectangulo{
+	background: url(../css/images/captcha/Captcha_rectangulo_sprite.png) no-repeat;
+
+}
+
+.triangulo{
+	background: url(../css/images/captcha/Captcha_triangolo_sprite.png) no-repeat;
+	
+}
+
+.circulo:hover, 
+.pentagono:hover, 
+.rectangulo:hover, 
+.triangulo:hover, 
+.iconoOn{
+	background-position: 0 -32px;
+} 
+.pri{
+font-size: 16px;
+} 
+/*-------------- Cambios de adaptacion modX ------------------*/
+
+.acep {
+	font-family: "HalogenRegular";
+	font-size: 18px;
+	line-height: 26px;
+}
+input[type="radio"]{
+display: none; 
+}
+p.invalidCaptchaApli {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #F36523;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    float: left;
+    font-size: 12px;
+    line-height: 15px !important;
+    margin-left: 30px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    text-align: center;
+    width: 273px;
+}      

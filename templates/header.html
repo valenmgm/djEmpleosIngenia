@@ -1,0 +1,25 @@
+{% load staticfiles %}
+  <div id="header">
+    <div id="logo">
+      <span><a href="http://www.ingeniagroup.com/" target="_blank"><img alt="Ingenia Group" src="{% static "images/header/logo_ingenia.png" %}"/></a></span>
+      <!--<span><a href="http://www.centralingenia.com/" target="_blank"><img alt="Central Ingenia" src=""/></a></span>-->
+    </div><!-- End logo -->
+    <div id="menuSection">
+      <div id="social">
+        <span><a href="http://www.facebook.com/pages/Ingenia-Group/46951457297?fref=ts" target="_blank"><img alt="Facebook Ingenia Group" src="{% static "images/header/facebook.png" %}" /></a></span>
+        <span><a href="https://twitter.com/IngeniaAgency" target="_blank"><img alt="Twitter Ingenia Group" src="{% static "images/header/twitter.png" %}"/></a></span>
+        <span><a href="http://www.linkedin.com/company/ingenia-group?trk=nmp_rec_act_company_photo" target="_blank"><img alt="Linkedin Ingenia Group" src="{% static "images/header/linkedin.png" %}" /></a></span>
+      </div><!-- End social -->
+       <div>
+        <ul class="navigation">
+        <li><a href="{% url 'urlHome' %}">INICIO</a></li>
+        <li><a href="{% url 'urlInfoIngenia' %}">INGENIA</a></li>
+        <li><a href="{% url 'urlBeneficios' %}">BENEFICIOS</a></li>
+        <li><a href="{% url 'urlVacantes' %}">VACANTES</a></li>
+        <li><a href="{% url 'urlAplicaYa' %}">APLICA AHORA</a></li>
+        <li><a href="{% url 'urlContacto' %}">CONTACTO</a></li>
+
+        </ul>
+      </div>
+    </div>	<!-- End menuSection -->
+  </div><!-- End header -->

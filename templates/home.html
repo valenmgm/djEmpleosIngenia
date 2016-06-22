@@ -1,2 +1,10 @@
-{% load staticfiles %}
-{% static "htmlchunks/head.html %}
+{%extends 'base.html' %}
+
+{% block content %}
+  {% for element in vacantes %}
+    <h3>{{element.nombre}}</h3>
+    {{element.descripcion}}
+    <br>
+  {% endfor %}
+
+{% endblock %}

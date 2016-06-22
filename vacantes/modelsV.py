@@ -11,6 +11,11 @@ class Vacante(models.Model):
     sueldo = models.CharField(max_length=100)
     fecha = models.DateTimeField(auto_now_add=True)
 
+    ABIERTA_CHOICES = (
+        (True, "Si"),
+        (False, "No"),
+    )
+    abierta = models.BooleanField(choices=ABIERTA_CHOICES, default=True)
     def __str__(self):
         return self.nombre
 
@@ -19,7 +24,11 @@ class Requisito(models.Model):
     titulo = models.CharField(max_length=120)
     contendio = models.TextField()
     #Relations
-    requisito_de = models.ForeignKey(Vacante)
+    requisito_de = models.ForeignKey(Vacante, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
-        return self.titulo
+        return (str(self.titulo) +" - " + str(self.requisito_de))
+
+class BeneficiosPrestacione(models.Model):
+    titulo = models.CharField(max_length=100)
+    contenido = models.TextField()
