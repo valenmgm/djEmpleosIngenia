@@ -1,10 +1,121 @@
 {%extends 'base.html' %}
+{% load staticfiles %}
 
 {% block content %}
-  {% for element in vacantes %}
-    <h3>{{element.nombre}}</h3>
-    {{element.descripcion}}
-    <br>
-  {% endfor %}
+<!-- Intro -->
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center orange-text text-accent-4">Ingenia</h1>
+        <div class="row center">
+          <h5 class="header col s12 grey-text text-darken-4 light">{{homeIntro}}</h5>
+        </div>
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange accent-4">Aplica Ya</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="{%static 'imagenesHome/introprin.jpg' %}" alt="Unsplashed background img 1"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Contact Us</h4>
+          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="{% static 'imagenesHome/imagen_proyectos.jpg' %}" alt="Unsplashed background img 2"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+
+        {%for vacante in homeVacantes %}
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h5 class="center">{{vacante.nombre}}</h5>
+
+            <p class="light">{{vacante.descripcion}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+<!-- Quienes Somos / Por Que Ingenia -->
+  <div class="">
+    <div class="">
+      <div class="">
+        ¿Quienes Somos?
+      </div>
+      <div class="">
+        {{homeQuienesSomos}}
+      </div>
+    </div>
+    <div class="">
+      <div class="">
+        ¿Por qué Ingenia?
+      </div>
+      <div class="">
+        {{homePorQueIngenia}}
+      </div>
+    </div>
+  </div>
+
+<!-- Vacantes -->
+  <div class="">
+    <div class="">
+      Vacantes
+    </div>
+    {% for element in homeVacantes %}
+      <div class="">
+        <div class="">
+          {{element.nombre}}
+        </div>
+        <div class="">
+          {{element.descripcion}}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+<!-- Algunos de Nuestro Proyectos / Sketch -->
+  <div class="">
+
+    <div class="">
+      <img src="{% static 'imagenesHome/sketch.png' %}" alt="Imagen Sketch Servicio"/>
+    </div>
+  </div>
 
 {% endblock %}

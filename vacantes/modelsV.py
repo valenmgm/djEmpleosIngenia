@@ -28,7 +28,3 @@ class Requisito(models.Model):
 
     def __str__(self):
         return (str(self.titulo) +" - " + str(self.requisito_de))
-
-class BeneficiosPrestacione(models.Model):
-    titulo = models.CharField(max_length=100)
-    contenido = models.TextField()
