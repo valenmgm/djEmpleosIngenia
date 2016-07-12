@@ -3,4 +3,3 @@ from . import modelsV
 # Register your models here.
 admin.site.register(modelsV.Vacante)
 admin.site.register(modelsV.Requisito)
-admin.site.register(modelsV.BeneficiosPrestacione)

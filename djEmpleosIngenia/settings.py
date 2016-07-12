@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #MyApps
-    'home',
+    'info_base',
     'vacantes',
     'contacto',
 
@@ -60,7 +60,9 @@ ROOT_URLCONF = 'djEmpleosIngenia.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['templates/generals',
+                  'templates',],
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,8 +124,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
+MEDIA_ROOT = str(os.path.join(BASE_DIR, "media")) + "/"
+
 STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, "static")
+        os.path.join(BASE_DIR, "static"),
+        MEDIA_ROOT,
 ]
 
 STATIC_URL = '/static/'
