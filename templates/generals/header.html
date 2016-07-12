@@ -1,11 +1,17 @@
-
-<nav class="orange accent-4" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-         <li><a href="#">HTML5</a></li>
-         <li><a href="#">CSS</a></li>
-         <li><a href="www.google.com">JavaScript</a></li>
-      </ul>
-    </div>
+{% load staticfiles %}
+<div class="navbar-fixed">
+  <nav class="nav-wrapper orange accent-4">
+    <a href="#" class="brand-logo"><img src="{% static 'imagenesHome/logo_ingenia.png' %}" alt="Logo Ingenia" /></a>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="#">Vacantes</a></li>
+      <li><a href="#">Contacto</a></li>
+      <li><a href="#" class="btn-large grey ">Aplicar</a></li>
+    </ul>
+    <ul class="side-nav orange accent-4" id="mobile-demo">
+      <li><a href="#">Vacantes</a></li>
+      <li><a href="#">Contacto</a></li>
+      <li><a href="#" class="btn-large grey darken-1s">Aplicar</a></li>
+    </ul>
   </nav>
+</div>
