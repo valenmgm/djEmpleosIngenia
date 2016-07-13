@@ -16,14 +16,15 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from info_base import viewsIB
+from home import viewsH
 from vacantes import viewsV
 from contacto import viewsC
+from beneficios import viewsB
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', viewsIB.renderHome, name='urlHome'),
-    #url(r'^infoingenia/$', viewsIB.renderIngeniaInfo, name='urlInfoIngenia'),
-    #url(r'^vacantes/$', viewsV.renderVacantes, name='urlVacantes'),
+    url(r'^$', viewsH.renderHome, name='urlHome'),
+    url(r'^beneficios/$', viewsB.renderBeneficios, name='urlBeneficios'),
+    url(r'^vacantes/$', viewsV.renderVacantes, name='urlVacantes'),
     #url(r'^contacto/$', viewsC.renderContactoIngenia, name='urlContacto'),
     ]

@@ -38,8 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #MyApps
-    'info_base',
+    'home',
     'vacantes',
+    'beneficios',
     'contacto',
 
 ]

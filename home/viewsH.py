@@ -3,19 +3,19 @@ from djEmpleosIngenia.settings import MEDIA_ROOT
 
 # Create your views here.
 from vacantes import modelsV
-from . import modelsIB
+from . import modelsH
 
 def renderHome(request):
-    homeIntro = modelsIB.HomeIngenia.objects.get(titulo="home_intro")
-    homeQuienesSomos = modelsIB.HomeIngenia.objects.get(titulo="home_quienes_somos")
-    homePorQueIngenia = modelsIB.HomeIngenia.objects.get(titulo="home_por_que_ingenia")
+    homeIntro = modelsH.HomeIngenia.objects.get(titulo="info_1")
+    homeQuienesSomos = modelsH.HomeIngenia.objects.get(titulo="info_2")
+    homePorQueIngenia = modelsH.HomeIngenia.objects.get(titulo="info_3")
 
-    imagenIntro = modelsIB.ImagenesHome.objects.get(seccion='imagen_intro')
-    imagenAlgunosP = modelsIB.ImagenesHome.objects.get(seccion='imagen_nuestros_proyectos')
-    imagenSketch = modelsIB.ImagenesHome.objects.get(seccion='imagen_sketch_servicio')
+    imagenIntro = modelsH.ImagenesHome.objects.get(seccion='imagen_1')
+    imagenAlgunosP = modelsH.ImagenesHome.objects.get(seccion='imagen_2')
+    imagenSketch = modelsH.ImagenesHome.objects.get(seccion='imagen_3')
 
     vacantes = modelsV.Vacante.objects.filter(abierta = True)
-    beneficios = modelsIB.BeneficiosyPrestacione.objects.all()
+    beneficios = modelsH.BeneficiosyPrestacione.objects.all()
 
     data = {"homeIntro":homeIntro.contenido,
             "homeQuienesSomos":homeQuienesSomos.contenido,
