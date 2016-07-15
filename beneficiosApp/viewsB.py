@@ -5,8 +5,9 @@ from contactoApp import modelsC
 # Create your views here.
 
 def renderBeneficios(request):
-    bens = modelsB.BeneficiosyPrestacione.objects.all()
+    benscortos = modelsB.BeneficiosyPrestacionesCorto.objects.all()
+    benslargos = modelsB.BeneficiosyPrestacionesLargo.objects.all()
     cIngenia = modelsC.ContactoIngenia.objects.latest('fecha')
-    data = {'beneficios':bens, "contactoI":cIngenia}
+    data = {'beneficiosCortos':benscortos, 'beneficiosLargos':benslargos, "contactoI":cIngenia}
 
     return render(request, 'beneficios.html', data)

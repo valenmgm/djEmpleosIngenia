@@ -27,4 +27,4 @@ class Requisito(models.Model):
     requisito_de = models.ForeignKey(Vacante, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
-        return (str(self.titulo) +" - " + str(self.requisito_de))
+        return str(self.titulo) +" - " + str(self.requisito_de)

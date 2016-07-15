@@ -7,6 +7,7 @@ from . import formsC
 # Create your views here.
 def renderContactoIngenia(request):
     cRp = modelsC.ContactoRecursosHumanos.objects.latest('fecha')
+    cIngenia = modelsC.ContactoIngenia.objects.latest('fecha')
 
     formI = formsC.formInteresado()
     data = {
@@ -14,7 +15,7 @@ def renderContactoIngenia(request):
         'formInteresado':formI,
         'contactoI':cIngenia
     }
-    
+
     return render(request, 'contacto.html', data)
 
 def renderAplicaYa(request):
@@ -29,8 +30,8 @@ def renderAplicaYa(request):
         cIngenia = modelsC.ContactoIngenia.objects.latest('fecha')
 
         data = {
-        'form':formA,
-        'contactoI':cIngenia,
+            'form':formA,
+            'contactoI':cIngenia,
         }
 
         return render(request, 'aplicaya.html', data)

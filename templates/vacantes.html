@@ -1,28 +1,35 @@
 {% extends 'base.html' %}
 {% block content %}
 Encuentra la vacante para ti
-<div class="container">
+<div class="">
   {% for vacante in vacantes %}
-    <div class="section">
-      <h3 class="">{{vacante.nombre}}</h3>
-      <p class="">
-        {{vacante.descripcion}}
+    <div class="section card blue-grey lighten-4">
+      <div class="container">
+      <h4 class="">{{vacante.nombre|linebreaks}}</h4>
+      <p class="flow-text">
+        {{vacante.descripcion|linebreaks}}
       </p>
       <ul>
-        <li>{{vacante.sueldo}}</li>
+        <li>{{vacante.sueldo|linebreaks}}</li>
       </ul>
-      <h4 class="orange-text text-accent-4">Requisitos</h4>
-      <ul>
+      <ul class="card blue-grey lighten-3">
+        <div class="section">
+          <div class="container">
+          <h5 class="">Requisitos</h5>
         {% for requisito in vacante.requisito_set.all %}
-        <li class="card blue-grey lighten-2">
-          <h5>{{requisito.titulo}}</h5>
-          <p>
-            {{requisito.contendio}}
+        <li class="">
+          <h6>{{requisito.titulo|linebreaks}}</h6>
+          <p class="flow-text">
+            {{requisito.contendio|linebreaks}}
           </p>
         </li>
         {% endfor %}
+      </div>
+      </div>
       </ul>
     </div>
+  </div>
+  <br>
   {% endfor %}
 </div>
 
