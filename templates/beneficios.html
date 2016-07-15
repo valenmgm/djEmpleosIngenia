@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="section container">
+  <h3 class="orange-text text-accent-4">Beneficios y Prestaciones</h3>
+</div>
+
+<div class="row valign-wrapper">
+  <div class="section col s12 m5 l4">
+    <div class="container">
+      <div class="card blue-grey lighten-1">
+        <div class="container section">
+          <h6 class="white-text light flow-text">
+            Sabemos lo importante que son cada una de las personas de nuestro equipo y la seguridad que buscan en un trabajo serio y profesional.
+            <br>
+            <br>
+            Por esta razón contamos con prestaciones que te brindarán la seguridad que necesitas.
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section col s12 m7 l8">
+    <div class="container">
+      {% for beneficio in beneficiosCortos %}
+        <div class="section">
+          <h5>{{beneficio.titulo|linebreaks}}</h5>
+          <p class="light">
+            {{beneficio.contenido|linebreaks}}
+          </p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    {% for beneficio in beneficiosLargos %}
+      <div class="col s12 m6 l6 section">
+        <h5>{{beneficio.titulo|linebreaks}}</h5>
+        <p class="light">
+          {{beneficio.contenido|linebreaks}}
+        </p>
+      </div>
+    {% endfor %}
+  </div>
+
+</div>
+{% endblock %}

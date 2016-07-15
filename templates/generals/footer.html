@@ -4,18 +4,14 @@
   <div class="row">
     <div class="col l6 m6 s12">
       <h5 class="white-text">Empleos Ingenia</h5>
-      <p class="grey-text text-lighten-4">En Ingenia estamos siempre buscando nuevo talento para integrar a nuestro equipo.</p>
+      <p class="grey-text text-lighten-4">{{info_intro.contenido|linebreaks}}</p>
     </div>
-    <div class="col l3 s12">
-      <h5 class="white-text">Settings</h5>
-      <ul>
-        <li><a class="white-text" href="#!">Link 1</a></li>
-      </ul>
-    </div>
-    <div class="col l3 s12">
-      <h5 class="white-text">Connect</h5>
-      <ul>
-        <li><a class="white-text" href="#!">Link 1</a></li>
+    <div class="col l3 m6 s12">
+      <ul class="container section white-text light">
+        <li>{{contactoI.nombre_compania|linebreaks}}</li>
+        <li>{{contactoI.direccion|linebreaks}}</li>
+        <li>{{contactoI.telefono|linebreaks}}</li>
+        <li>{{contactoI.email|linebreaks}}</li>
       </ul>
     </div>
   </div>

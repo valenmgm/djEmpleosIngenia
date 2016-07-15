@@ -38,9 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #MyApps
-    'info_base',
-    'vacantes',
-    'contacto',
+    'homeApp',
+    'vacantesApp',
+    'beneficiosApp',
+    'contactoApp',
 
 ]
 
@@ -125,10 +126,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 MEDIA_ROOT = str(os.path.join(BASE_DIR, "media")) + "/"
+MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [
         os.path.join(BASE_DIR, "static"),
-        MEDIA_ROOT,
 ]
 
 STATIC_URL = '/static/'

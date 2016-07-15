@@ -16,14 +16,18 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from info_base import viewsIB
-from vacantes import viewsV
-from contacto import viewsC
+from django.conf import settings
+from django.conf.urls.static import static
+
+from homeApp import viewsH
+from vacantesApp import viewsV
+from contactoApp import viewsC
+from beneficiosApp import viewsB
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', viewsIB.renderHome, name='urlHome'),
-    #url(r'^infoingenia/$', viewsIB.renderIngeniaInfo, name='urlInfoIngenia'),
-    #url(r'^vacantes/$', viewsV.renderVacantes, name='urlVacantes'),
-    #url(r'^contacto/$', viewsC.renderContactoIngenia, name='urlContacto'),
-    ]
+    url(r'^$', viewsH.renderHome, name='urlHome'),
+    url(r'^beneficios/$', viewsB.renderBeneficios, name='urlBeneficios'),
+    url(r'^vacantes/$', viewsV.renderVacantes, name='urlVacantes'),
+    url(r'^contacto/$', viewsC.renderContactoIngenia, name='urlContacto'),
+    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
