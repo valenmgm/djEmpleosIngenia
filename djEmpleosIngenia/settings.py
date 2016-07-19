@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #MyApps
     'homeApp',
+    'ingeniaApp',
     'vacantesApp',
     'beneficiosApp',
     'contactoApp',

@@ -55,6 +55,9 @@ class ContactoInteresado(models.Model):
     email = models.EmailField()
     mensaje = models.TextField()
 
+    def __str__(self):
+        return self.email
+
 class ContactoRecursosHumanos(models.Model):
     nombre = models.CharField(max_length=60)
     puesto = models.CharField(max_length=60)

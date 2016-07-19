@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <div class="section">
+    <div class="card orange accent-4">
+      <div class="container section">
+        <h3 class="white-text">Gracias!</h3>
+        <blockquote class="white-text">
+          Tu información ha sido registrada con exito.
+        </blockquote>
+        <a class="btn-large blue-grey accent-3 white-text waves-effect waves-light" href="{% url 'urlHome' %}">Regresar</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

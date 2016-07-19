@@ -4,6 +4,7 @@
     <a href="{% url 'urlHome' %}" class="brand-logo"><img src="{% static 'imagenesHome/logo_ingenia.png' %}" alt="Logo Ingenia" /></a>
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="{% url 'urlIngenia' %}">Ingenia</a></li>
       <li><a href="{% url 'urlVacantes' %}">Vacantes</a></li>
       <li><a href="{% url 'urlBeneficios' %}">Beneficios</a></li>
       <li><a href="{% url 'urlContacto' %}">Contacto</a></li>
@@ -11,6 +12,7 @@
     </ul>
     <ul class="side-nav orange accent-4" id="mobile-demo">
       <li><a href="{% url 'urlHome' %}">Home</a></li>
+      <li><a href="{% url 'urlIngenia' %}">Ingenia</a></li>
       <li><a href="{% url 'urlVacantes' %}">Vacantes</a></li>
       <li><a href="{% url 'urlBeneficios' %}">Beneficios</a></li>
       <li><a href="{% url 'urlContacto' %}">Contacto</a></li>
