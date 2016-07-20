@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
+
 <div class="section">
 
   <div class="row">
@@ -84,9 +85,32 @@
         </div>
       </div>
     </div>
-
   </div>
+<!--
+  <-- Modal Trigger --
+  <a class="waves-effect waves-light btn modal-trigger orange" href="#modal1">Aplica Ya</a>
 
+  <!-- Modal Structure --
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Aplica Ya</h4>
+      <form method="post">
+        {% csrf_token %}
+
+        {{formAplicante}}
+
+        <button class="btn waves-effect waves-light orange lighten-1" type="submit" name="action">Mandar
+           <i class="material-icons right">send</i>
+        </button>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn waves-effect waves-light orange lighten-1" type="submit" name="action">Mandar
+         <i class="material-icons right">send</i>
+      </button>
+    </div>
+  </div>
+-->
   <!--Aplica Ya -->
 
   <div class="row">

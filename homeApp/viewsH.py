@@ -13,7 +13,6 @@ def renderHome(request):
     cIngenia = modelsC.ContactoIngenia.objects.latest('fecha')
 
     data = {
-            "Vacantes":vacantes,
             "contactoI":cIngenia,
             }
 

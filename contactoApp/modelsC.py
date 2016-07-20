@@ -27,6 +27,7 @@ class ContactoIngenia(models.Model):
     telefono = models.CharField(max_length=50, default="+51 (55) 50 2209 0000")
     email = models.EmailField(blank=True)
     fecha = models.DateField(auto_now=True)
+    mensaje_home = models.TextField(blank=False)
     def __str__(self):
         return ("Info " + str(self.fecha))
 
