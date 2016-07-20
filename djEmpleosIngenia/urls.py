@@ -20,6 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from homeApp import viewsH
+from ingeniaApp import viewsI
 from vacantesApp import viewsV
 from contactoApp import viewsC
 from beneficiosApp import viewsB
@@ -27,7 +28,9 @@ from beneficiosApp import viewsB
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', viewsH.renderHome, name='urlHome'),
+    url(r'^ingenia/$', viewsI.renderIngenia, name='urlIngenia'),
     url(r'^beneficios/$', viewsB.renderBeneficios, name='urlBeneficios'),
     url(r'^vacantes/$', viewsV.renderVacantes, name='urlVacantes'),
     url(r'^contacto/$', viewsC.renderContactoIngenia, name='urlContacto'),
+    url(r'^exito/$', viewsC.renderExito, name='urlExito'),
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
