@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 
 from djEmpleosIngenia.settings import MEDIA_ROOT
+import datetime
 
 def path_and_rename(instance, filename):
     ext = filename.split('.')[-1]
@@ -28,9 +29,8 @@ class IngeniaInfo(models.Model):
 class IngeniaImagen(models.Model):
     IMAGEN_CHOICES = (
         ("imagen_intro","Imagen Intro"),
-        ("imagen_1","Imagen Pilar 1"),
-        ("imagen_2","Imagen Pilar 2"),
-        ("imagen_3","Imagen Pilar 3"),
+        ("imagen_a1","Imagen Adicional 1"),
+        ("imagen_a2","Imagen Adicional 2"),
     )
     seccion = models.CharField(max_length=50, choices=IMAGEN_CHOICES)
     imagen = models.ImageField(upload_to=path_and_rename)

@@ -2,27 +2,23 @@ from django.shortcuts import render
 
 from . import modelsI
 
-from contactoApp import modelsC
+from contactoApp.modelsC import ContactoIngenia
 # Create your views here.
 
 def renderIngenia(request):
 
-    ii = modelsI.IngeniaInfo.objects.get(seccion = "info_intro")
-    ia1 = modelsI.IngeniaInfo.objects.get(seccion = "info_a1")
-    ip1 = modelsI.IngeniaInfo.objects.get(seccion = "info_p1")
-    ip2 = modelsI.IngeniaInfo.objects.get(seccion = "info_p2")
-    ip3 = modelsI.IngeniaInfo.objects.get(seccion = "info_p3")
-    ia2 = modelsI.IngeniaInfo.objects.get(seccion = "info_a2")
+    data = {}
 
-    cIngenia = modelsC.ContactoIngenia.objects.latest('fecha')
+    for info in modelsI.IngeniaInfo.objects.all():
+        referencia = info.seccion
+        objeto = modelsI.IngeniaInfo.objects.get(seccion = referencia)
+        data[referencia] = objeto
 
-    data = {
-        "info_intro":ii,
-        "info_p1":ip1,
-        "info_p2":ip2,
-        "info_p3":ip3,
-        "info_a1":ia1,
-        "info_a2":ia2,
-        "contactoI":cIngenia,
-    }
+    for imagen in modelsI.IngeniaImagen.objects.all():
+        referencia = imagen.seccion
+        objeto = modelsI.IngeniaImagen.objects.get(seccion = referencia)
+        data[referencia] = objeto
+
+    data["contactoI"] = ContactoIngenia.objects.latest('fecha')
+
     return render(request, 'ingenia.html', data)

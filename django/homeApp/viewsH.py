@@ -4,13 +4,12 @@ from djEmpleosIngenia.settings import MEDIA_ROOT
 
 # Create your views here.
 from vacantesApp import modelsV
-from contactoApp import modelsC
+from contactoApp.modelsC import ContactoIngenia
 from . import modelsH
 
 def renderHome(request):
 
-    vacantes = modelsV.Vacante.objects.filter(abierta = True)
-    cIngenia = modelsC.ContactoIngenia.objects.latest('fecha')
+    cIngenia = ContactoIngenia.objects.latest('fecha')
 
     data = {
             "contactoI":cIngenia,

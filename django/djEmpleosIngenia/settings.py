@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Django settings for djEmpleosIngenia project.
 
@@ -31,6 +32,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #esternal
+    'material',
+    'material.frontend',
+    #django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

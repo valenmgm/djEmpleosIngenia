@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% include 'material/includes/material_css.html' %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,7 +28,8 @@
 
         {% include 'footer.html' %}
     </body>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    {% include 'material/includes/material_js.html' %}
     <script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
     <script src="{% static 'js/init.js' %}"></script>
 </html>
