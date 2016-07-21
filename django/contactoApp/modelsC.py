@@ -34,7 +34,7 @@ class ContactoIngenia(models.Model):
 class ContactoAplicante(models.Model):
     """incluye funcion para obtener nombre de la vacante"""
 
-    nombre = models.CharField(max_length=60)
+    nombre_completo = models.CharField(max_length=60)
     email = models.EmailField()
     telefono = models.CharField(max_length=50)
     SEXO_CHOICES= (
@@ -53,7 +53,7 @@ class ContactoAplicante(models.Model):
 class ContactoInteresado(models.Model):
     """Deja de molestar pylint"""
     nombre = models.CharField(max_length=60)
-    email = models.EmailField()
+    correo_electronico = models.EmailField()
     mensaje = models.TextField()
 
     def __str__(self):
@@ -66,3 +66,6 @@ class ContactoRecursosHumanos(models.Model):
     foto = models.ImageField(upload_to=path_and_rename_foto)
     email = models.EmailField()
     fecha = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.nombre + " " + self.puesto
