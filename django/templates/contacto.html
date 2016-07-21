@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% load material_form %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="section">
+
+  <div class="row">
+<!-- Card RP -->
+    <div class="col s12 m12 l7">
+      <div class="container-half">
+        <div class="card grey lighten-2">
+          <!-- Small screen card -->
+          <div class="section">
+            <div class="hide-on-med-and-up">
+              <div class="row section">
+                <div class="valign-wrapper">
+                  <div class="col s6">
+                    <div class="container">
+                      <h4>{{contactoRp.nombre|linebreaks}}</h4>
+                    </div>
+                  </div>
+                  <div class="col s6">
+                    <div class="container-double">
+                      <img  src="{{contactoRp.foto}}" class="circle responsive-img">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <h4 class="light">{{contactoRp.puesto|linebreaks}}</h4>
+              </div>
+              <div class="container">
+                <p>
+                  {{contactoRp.bio|linebreaks}}
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Medium/Large Screen Card -->
+          <div class="hide-on-small-only">
+            <div class="container-half section">
+              <div class="row">
+                <div class="valign-wrapper">
+                  <div class="col m4 l4">
+                    <div class="">
+                      <h3>{{contactoRp.nombre|linebreaks}}</h3>
+                    </div>
+                  </div>
+                  <div class="col m4 l4 center">
+                    <div class="container center">
+                      <img  src="{% static 'imagenes/moi.jpg' %}" class="circle responsive-img">
+                    </div>
+                  </div>
+                  <div class="col m4 l4 right-align"><h4 class="light">{{contactoRp.puesto|linebreaks}}</h4></div>
+                </div>
+              </div>
+              <p>
+                {{contactoRp.bio|linebreaks}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Form Interesado -->
+    <div class="col s12 m12 l5">
+      <div class="container-half">
+        <div class="card">
+          <div class="container-half section">
+            <h4>Alguna pregunta?</h4>
+
+            <form method="post">
+              {% csrf_token %}
+
+              {{formInteresado}}
+              <br>
+              <br>
+              <button class="btn waves-effect waves-light orange lighten-1" type="submit" name="_submit">Mandar
+                 <i class="material-icons right">send</i>
+              </button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger orange" href="#modal1">Aplica Ya</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Aplica Ya</h4>
+      <form method="post">
+        {% csrf_token %}
+
+        {{formAplicante}}
+
+        <button class="btn waves-effect waves-light orange lighten-1" type="submit" name="action">Mandar
+           <i class="material-icons right">send</i>
+        </button>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn waves-effect waves-light orange lighten-1" type="submit" name="action">Mandar
+         <i class="material-icons right">send</i>
+      </button>
+    </div>
+  </div>
+
+  <!--Aplica Ya -->
+
+  <div class="row">
+    <div class="container-half">
+      <div class="card">
+        <div class="container section">
+          <h4>Aplica Ya</h4>
+          <form method="post">
+            {% csrf_token %}
+
+            {% form form=formAplicante %}{% endform %}
+
+            <button class="btn waves-effect waves-light orange lighten-1" type="submit" name="action">Mandar
+               <i class="material-icons right">send</i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+{% endblock %}

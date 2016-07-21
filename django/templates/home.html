@@ -1,0 +1,133 @@
+{%extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<!-- Intro -->
+    <div id="index-banner" class="parallax-container valign-wrapper">
+      <div class="row center">
+        <div class="section center">
+            <img src="{% static 'imagenes/logo_ingenia.png' %}" alt="Logo Ingenia"/>
+            <div class="container-double">
+              <div class="card orange accent-2orange accent-2orange accent-2orange accent-2orange accent-2orange accent-4">
+                <div class="container section">
+                  <h6 class="white-text left-align">{{contactoI.mensaje_home|linebreaks}}</h6>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="parallax"><img src="{%static 'imagenes/introprin.jpg' %}" alt="Unsplashed background img 1"></div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="row">
+      <div class="col s12 m6 l6">
+        <a href="{% url 'urlIngenia' %}">
+        <div class="card">
+          <div class="container section center">
+            <p class="black-text">
+              Conocenos más
+            </p>
+            <h4 class="black-text">Ingenia</h4>
+          </div>
+        </div>
+      </a>
+      </div>
+      <div class="col s12 m6 l6">
+        <a href="{% url 'urlVacantes' %}">
+        <div class="card">
+          <div class="container section center">
+            <p class="black-text">
+              Encuentra tu lugar
+            </p>
+            <h4 class="black-text">Vacantes</h4>
+          </div>
+        </div>
+      </a>
+      </div>
+      <div class="col s12 m6 l6">
+        <a href="{% url 'urlBeneficios' %}">
+        <div class="card">
+          <div class="container section center">
+            <p class="black-text">
+              Ingenia se preocupa por ti
+            </p>
+            <h4 class="black-text">Beneficios y Prestaciones</h4>
+          </div>
+        </div>
+      </a>
+      </div>
+      <div class="col s12 m6 l6">
+        <a href="{% url 'urlContacto' %}">
+        <div class="card">
+          <div class="container section center">
+            <p class="black-text">
+              Acercate y empieza
+            </p>
+            <h4 class="black-text">Contacto / Aplica Ya</h4>
+          </div>
+        </div>
+      </a>
+      </div>
+    </div>
+
+<!--
+Vacantes
+  <div class="blue-grey lighten-5">
+      <div class="container center">
+        <div class="card orange accent-2orange accent-2orange accent-2orange accent-2orange accent-2blue-grey lighten-5">
+          <h4 class="orange-text text-accent-4">Oportunidades de Trabajo</h4>
+        </div>
+      </div>
+          <div class="container">
+              <div class="section">
+                  <div class="row valign-wrapper">
+
+                      {%for vacante in Vacantes %}
+                          <div class="col s12 m6">
+                              <div class="icon-block">
+                                  <h5 class="center orange-text text-accent-4">{{vacante.nombre|linebreaks}}</h5>
+
+                                  <p class="light">{{vacante.descripcion|linebreaks}}</p>
+                              </div>
+                          </div>
+                      {% endfor %}
+                  </div>
+                  <div class="row center card orange accent-2orange accent-2orange accent-2orange accent-2orange accent-2blue-grey darken-1">
+                    <div class="section">
+                      <div class="container">
+                        <div class=" card orange accent-2orange accent-2orange accent-2orange accent-2orange accent-2blue-grey center">
+                          <div class="container">
+                            <div class="section">
+                            <a href="#"><h5 class="white-text">Ver Detalles</h5></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="container">
+      <div class="row">
+          <div class="col s12 center">
+              <h4 class="orange-text text-accent-4 center">{{info_3.titulo|linebreaks}}</h4>
+              <p class="left-alaign light">
+                  {{info_3.contenido|linebreaks}}
+              </p>
+          </div>
+      </div>
+  </div>
+  <div class="col s12">
+      <div class="parallax-container valign-wrapper">
+          <div class="parallax"><img src="{% static 'imagenes/imagen_proyectos.jpg' %}" alt="Unsplashed background img 2"></div>
+      </div>
+  </div>
+-->
+{% endblock %}

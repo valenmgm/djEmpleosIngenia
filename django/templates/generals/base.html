@@ -1,0 +1,35 @@
+{% load staticfiles %}
+{% include 'material/includes/material_css.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css       -->
+        <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet"/>
+
+        <title>Empleos de Ingenia Group</title>
+    </head>
+
+    <body>
+
+        {% include "header.html" %}
+
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        {% include 'footer.html' %}
+    </body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    {% include 'material/includes/material_js.html' %}
+    <script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
+    <script src="{% static 'js/init.js' %}"></script>
+</html>

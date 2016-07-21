@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="">
+  {% for vacante in vacantes %}
+    <div class="section card blue-grey lighten-4">
+      <div class="container">
+      <h4 class="">{{vacante.nombre|linebreaks}}</h4>
+      <p class="flow-text">
+        {{vacante.descripcion|linebreaks}}
+      </p>
+      <ul>
+        <li>{{vacante.sueldo|linebreaks}}</li>
+      </ul>
+      <ul class="card blue-grey lighten-3">
+        <div class="section">
+          <div class="container">
+          <h5 class="">Requisitos</h5>
+        {% for requisito in vacante.requisito_set.all %}
+        <li class="">
+          <h6>{{requisito.titulo|linebreaks}}</h6>
+          <p class="flow-text">
+            {{requisito.contendio|linebreaks}}
+          </p>
+        </li>
+        {% endfor %}
+      </div>
+      </div>
+      </ul>
+    </div>
+  </div>
+  <br>
+  {% endfor %}
+</div>
+
+{% endblock %}
